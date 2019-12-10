@@ -236,6 +236,9 @@ WSGI_MODE=${WSGI_MODE:-"uwsgi"}
 # Repositories
 # ------------
 
+# Base GIT Repo URL (forked projects)
+GIT_BASE_FORK=${GIT_BASE:-https://github.com}
+
 # Base GIT Repo URL
 GIT_BASE=${GIT_BASE:-https://opendev.org}
 
@@ -283,7 +286,7 @@ KEYSTONE_REPO=${KEYSTONE_REPO:-${GIT_BASE}/openstack/keystone.git}
 KEYSTONE_BRANCH=${KEYSTONE_BRANCH:-$TARGET_BRANCH}
 
 # neutron service
-NEUTRON_REPO=${NEUTRON_REPO:-${GIT_BASE}/openstack/neutron.git}
+NEUTRON_REPO=${NEUTRON_REPO:-${GIT_BASE_FORK}/rolaya/neutron.git}
 NEUTRON_BRANCH=${NEUTRON_BRANCH:-$TARGET_BRANCH}
 
 # neutron fwaas service
@@ -356,7 +359,7 @@ GITREPO["python-keystoneclient"]=${KEYSTONECLIENT_REPO:-${GIT_BASE}/openstack/py
 GITBRANCH["python-keystoneclient"]=${KEYSTONECLIENT_BRANCH:-$TARGET_BRANCH}
 
 # neutron client
-GITREPO["python-neutronclient"]=${NEUTRONCLIENT_REPO:-${GIT_BASE}/openstack/python-neutronclient.git}
+GITREPO["python-neutronclient"]=${NEUTRONCLIENT_REPO:-${GIT_BASE_FORK}/rolaya/python-neutronclient.git}
 GITBRANCH["python-neutronclient"]=${NEUTRONCLIENT_BRANCH:-$TARGET_BRANCH}
 
 # python client library to nova that horizon (and others) use
@@ -558,7 +561,7 @@ GITBRANCH["diskimage-builder"]=${DIB_BRANCH:-$BRANCHLESS_TARGET_BRANCH}
 GITDIR["diskimage-builder"]=$DEST/diskimage-builder
 
 # neutron-lib library containing neutron stable non-REST interfaces
-GITREPO["neutron-lib"]=${NEUTRON_LIB_REPO:-${GIT_BASE}/openstack/neutron-lib.git}
+GITREPO["neutron-lib"]=${NEUTRON_LIB_REPO:-${GIT_BASE_FORK}/rolaya/neutron-lib.git}
 GITBRANCH["neutron-lib"]=${NEUTRON_LIB_BRANCH:-$TARGET_BRANCH}
 GITDIR["neutron-lib"]=$DEST/neutron-lib
 
