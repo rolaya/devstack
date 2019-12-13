@@ -16,6 +16,7 @@ source $RC_DIR/functions
 # Set the target branch. This is used so that stable branching
 # does not need to update each repo below.
 TARGET_BRANCH=master
+TARGET_BRANCH_OPENSTACKCLIENT=4.0.0
 
 # Cycle trailing projects need to branch later than the others.
 TRAILING_TARGET_BRANCH=master
@@ -371,8 +372,8 @@ GITREPO["python-swiftclient"]=${SWIFTCLIENT_REPO:-${GIT_BASE}/openstack/python-s
 GITBRANCH["python-swiftclient"]=${SWIFTCLIENT_BRANCH:-$TARGET_BRANCH}
 
 # consolidated openstack python client
-GITREPO["python-openstackclient"]=${OPENSTACKCLIENT_REPO:-${GIT_BASE}/openstack/python-openstackclient.git}
-GITBRANCH["python-openstackclient"]=${OPENSTACKCLIENT_BRANCH:-$TARGET_BRANCH}
+GITREPO["python-openstackclient"]=${OPENSTACKCLIENT_REPO:-${GIT_BASE_FORK}/rolaya/python-openstackclient.git}
+GITBRANCH["python-openstackclient"]=${OPENSTACKCLIENT_BRANCH:-$TARGET_BRANCH_OPENSTACKCLIENT}
 # this doesn't exist in a lib file, so set it here
 GITDIR["python-openstackclient"]=$DEST/python-openstackclient
 
